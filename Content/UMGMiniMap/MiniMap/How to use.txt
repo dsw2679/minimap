@@ -1,0 +1,23 @@
+Hey everyone, thanks for buying my Mini Map!
+
+You want to know how to use it? Just watch this video!
+
+https://www.youtube.com/watch?v=EM9t86JjeqM
+
+Here some additional things I have not mentioned in the video:
+
+- The MiniMap has to be inside of a CanvasPanel, so just create a CanvasPanel which is filled completely by the MiniMap.
+
+- To set the Trace Channel the Mini Map uses to get the Z value OnClick, just click on the MiniMap Widget in your main Widget and set the GroundTraceChannel variable in the Details Panel! This Trace Channel should only block your terrain, floor or whatever ground you use.
+
+- If you want to change the texture the minimap uses to something you created manually, just don't put the CamCapture Actor in your level and open the MapRenderMaterialInstance where you see the parameter "Texture". Just put your texture in there and it will work ;) If your custom texture uses a different size than 2048x2048, you have to set the variable "ImageSize", which is again in the details Panel of the MiniMap Widget.
+Your custom texture must not fill the whole texture, but instead you need to have a white border around the image which fills one third of the texture. So if you use a custom texture with a size of 2048x2048, the actualy image has to be sized 1365x1365 centered in the middle of the texture. 2048 * (2/3).
+
+- If you use fullscreen, click on the MiniMap Widget in your main Widget and set the variable "Fullscreen Resolution" to your screen resolution. 
+
+- In the Details Panel of the MiniMap you will find a another variable, "FixedEdges". Tick this if you want to force the MiniMap to show the texture, even if the Player (or whatever location is followed) is going outside of the level dimensions. If you tick this, you also have to disable FollowRotation or lock it to 90°/180°/270°/360°.
+
+- Have fun :) If you make an awesome game with this, I would be honored to see it!
+
+If you have any questions, feel free to ask in my thread in the forums, write me a PM in the forums or directly write me a mail at john.alcatraz@mailbox.org :)
+
